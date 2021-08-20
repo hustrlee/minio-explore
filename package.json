@@ -1,0 +1,19 @@
+{
+  "name": "explore-minio",
+  "version": "1.0.0",
+  "description": "使用预签名 URLs（pre-signed URLs），客户端（Web 前端）可以直接向 S3 兼容的云存储服务器上传文件，且无需向用户暴露 S3 凭证。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:hustrlee/explore-minio"
+  },
+  "author": "Ryan Li",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "minio": "^7.0.19"
+  }
+}

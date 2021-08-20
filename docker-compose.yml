@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  minio:
+    image: minio/minio
+    hostname: minio
+    command: server --console-address ":9001" /data1 /data2 /data3 /data4
+    expose:
+      - "9000"
+      - "9001"
+    ports:
+      - 9000:9000
+      - 9001:9001
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+      MINIO_SERVER_URL: http://localhost:9000
+    volumes:
+      - data1-1:/data1
+      - data1-2:/data2
+      - data1-3:/data3
+      - data1-4:/data4
+
+volumes:
+  data1-1:
+  data1-2:
+  data1-3:
+  data1-4:
